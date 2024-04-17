@@ -1,0 +1,9 @@
+$ 56xx
+
+$ root
+root [0] .L analysis.C 
+root [0] analysis("hm-40.5V-bigpulse.root",1)
+
+
+root [0] .L newfitter.C
+root [1] newfitter("hm-40.5V-nolight.root",1) 
