@@ -1,0 +1,27 @@
+/*int CountLocalMaxima(TProfile *profile, int windowSize) {
+    int count = 0;
+    int nbins = profile->GetNbinsX();
+
+    // Smoothed data vector
+    std::vector<double> smoothedData(nbins);
+
+    // Apply moving average smoothing to the data
+    for (int i = 1; i <= nbins; ++i) {
+        double sum = 0.0;
+        int start = std::max(1, i - windowSize / 2);
+        int end = std::min(nbins, i + windowSize / 2);
+        for (int j = start; j <= end; ++j) {
+            sum += profile->GetBinContent(j);
+        }
+        smoothedData[i - 1] = sum / (end - start + 1);
+    }
+
+    // Find local maxima
+    for (int i = 1; i <= nbins - 2; ++i) {
+        if (smoothedData[i] > smoothedData[i - 1] && smoothedData[i] > smoothedData[i + 1]) {
+            ++count;
+        }
+    }
+
+    return count;
+    }*/
